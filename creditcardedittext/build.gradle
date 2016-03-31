@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+}
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Credit-Card-EditText'
+
+    publishedGroupId = 'com.amine.creditcardEt'
+    libraryName = 'Credit-Card-EditText'
+    artifact = 'creditcardedittext'
+
+    libraryDescription = 'Android EditText to validate a card number and to detect the type of the card AMEX/MasterCard/Visa..'
+
+    siteUrl = 'https://github.com/amineabdalkhalki/CreditCardEditText'
+    gitUrl = 'https://github.com/amineabdalkhalki/CreditCardEditText.git'
+
+    libraryVersion = '0.2'
+
+    developerId = 'amineabdalkhalki'
+    developerName = 'abdalkhalki amine'
+    developerEmail = 'amineabdalkhalki@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
