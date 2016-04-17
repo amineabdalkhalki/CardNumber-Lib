@@ -15,5 +15,5 @@ repositories {
 ```
 and this to your dependencies:
 ```
-compile 'com.amine.creditcardEt:creditcardedittext:0.2
+compile 'com.amine.creditcardEt:creditcardedittext:0.2'
 ```
