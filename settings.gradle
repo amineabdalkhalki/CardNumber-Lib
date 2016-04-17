@@ -1,1 +1,1 @@
-include ':app', ':creditcardedittext'
+include ':creditcardedittext', ':cardnumbervalidationdemo'
