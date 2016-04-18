@@ -57,6 +57,35 @@ on the activity you need to find view and implement addTextChangedListener(TextW
       });
 ```
 
-
 the afterTextChanged() method  can be a good place to add some animation when you get the card type to give 
 the user a better idea on what card type, a demo will be coming very soon!
+
+#What's Coming
+- Adding more cards types i.e: Discover
+- using apache commmons routines instead of the CCUtils.java
+- better code
+- better UI/UX implmentation (i have an idea)
+
+#Copyright and Stuff
+
+the java that provides the types and validation has been found on the following link:
+
+- http://www.rgagnon.com/javadetails/java-0034.html
+
+If you are the owner of this code please contact me in order to thank you and to give the credits you deserve.
+
+```
+Copyright 2016 Amine ABDALKHALKI
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
