@@ -1,4 +1,4 @@
-package com.amine.creditcardEt;
+package com.amine.cardnumberlib;
 
 public class CCUtils {
     public static final int INVALID          = -1;

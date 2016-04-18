@@ -1,4 +1,4 @@
-package com.amine.creditcardEt;
+package com.amine.cardnumberlib;
 
 import org.junit.Test;
 

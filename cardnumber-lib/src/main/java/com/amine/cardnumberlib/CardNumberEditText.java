@@ -1,4 +1,4 @@
-package com.amine.creditcardEt;
+package com.amine.cardnumberlib;
 
 import android.content.Context;
 import android.text.Editable;
@@ -15,13 +15,12 @@ public class CardNumberEditText extends EditText {
 
     String space = " ";
 
-    String cardType="";
+    String cardType = "";
 
     int maxDigits = 18;
 
     private Context mContext;
 
-    private boolean isValidationEnabled;
     private String Separator;
 
     public CardNumberEditText(Context context) {
@@ -56,7 +55,7 @@ public class CardNumberEditText extends EditText {
                 String sCardNumber = getText().toString().replace(getSeparator(), "");
 
                 //maxdigits minus the separtor replaced above
-                if (sCardNumber.length() > maxDigits - 3) {
+                if (sCardNumber.length() >= maxDigits - 4) {
                     setCardType(CCUtils.getNameByCardNumber(sCardNumber));
                 }
             }
@@ -106,14 +105,6 @@ public class CardNumberEditText extends EditText {
         Separator = separator;
     }
 
-    public boolean isValidationEnabled() {
-        return isValidationEnabled;
-    }
-
-    public void setIsValidationEnabled(boolean isValidationEnabled) {
-        this.isValidationEnabled = isValidationEnabled;
-    }
-
     public String getCardType() {
         return cardType;
     }
@@ -122,8 +113,13 @@ public class CardNumberEditText extends EditText {
         this.cardType = cardType;
     }
 
-    public int getMaxDigits() {
-        return maxDigits;
+    public boolean isValid() {
+        try {
+            String cardNumber = getText().toString().replace(getSeparator(), "");
+            return CCUtils.validCC(cardNumber);
+        } catch (Exception ex) {
+            return false;
+        }
     }
 
     private void setEditTextMaxLength(final EditText editText, int length) {

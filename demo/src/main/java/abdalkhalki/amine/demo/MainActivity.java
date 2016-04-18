@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.amine.creditcardEt.CardNumberEditText;
+import com.amine.cardnumberlib.CardNumberEditText;
 
 public class MainActivity extends AppCompatActivity {
 
