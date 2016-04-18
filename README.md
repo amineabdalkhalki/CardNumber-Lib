@@ -15,7 +15,7 @@ repositories {
 ```
 and this to your dependencies:
 ```
-compile 'com.amine.cardnumberlib:cardnumber-lib:0.6'
+compile 'com.amine.cardnumberlib:cardnumber-lib:0.7'
 ```
 
 #Working Example
